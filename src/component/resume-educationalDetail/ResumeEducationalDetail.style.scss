@@ -1,0 +1,21 @@
+.educationalDetail__container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+
+    & p:first-child {
+      font-weight: 900;  
+    }
+
+    & p:nth-child(2){
+        font-weight: 600;
+    }
+
+    .otherDetails{
+        display: flex;
+        width: 88%;
+        justify-content: space-between;
+        color: lightslategray;
+        font-size: 12px;
+    }
+}

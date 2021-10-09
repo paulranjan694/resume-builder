@@ -1,0 +1,33 @@
+.projectDetail__wrapper{
+    margin-bottom: 10px;
+
+    & > p:first-child{
+        font-weight: 900;
+    }
+
+    & > p:nth-child(2) {
+        font-weight: 700;
+    }
+
+    .techStack__wrapper{
+
+        & p {
+            font-size: 13px;
+        }
+
+        .techStack__container{
+            display: flex;
+            margin-top: -16px;
+            margin-left: 70px;
+
+            & > p{
+                margin: 0 5px;
+            }
+        }
+
+        & p a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+}

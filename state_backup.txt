@@ -1,0 +1,51 @@
+ this.state = {
+            contactDetails : {
+                name: '',
+                email: '',
+                summary: '',
+                phone: '',
+                jobTitle: '',
+                street: '',
+                state: '',
+                country: '',
+                pin: ''
+            },
+            educationDetails: [
+                {
+                    collegeName: "",
+                    degree: "",
+                    cgpa: "",
+                    collegeCity: "",
+                    graduationMonth: "",
+                    graduationYear: ""
+                }
+            ],
+            experienceDetails: [
+                {
+                    companyName: "",
+                    duration: "",
+                    position: "",
+                    description: ""
+                },
+            ],
+            projectDetails: [
+                {
+                    projectName: "",
+                    techStack : [],
+                    summary:"",
+                    projectLink: ""
+                }
+            ],
+            skills: {
+                language: [],
+                framework: [],
+                software: [],
+                ide: []
+            },
+            hobbies:[],
+            profileLinks: {
+                linkedIn: "",
+                github: ""
+            },
+            
+        }
