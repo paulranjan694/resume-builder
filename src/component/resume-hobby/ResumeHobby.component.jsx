@@ -1,9 +1,9 @@
 import React from 'react'
 import './ResumeHobby.style.scss'
 
-function ResumeHobby({hobby}) {
+function ResumeHobby({hobby, mr}) {
     return (
-        <div className='hobby'>
+        <div className='hobby' style={{marginRight:mr}}>
             {hobby}
         </div>
     )

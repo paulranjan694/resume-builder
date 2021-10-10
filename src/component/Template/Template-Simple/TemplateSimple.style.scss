@@ -1,0 +1,59 @@
+.templateSimple__wrapper{
+    border: 1px solid black;
+    width: 60%;
+    margin: 50px auto;
+
+    .templateSimple__header__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid;
+        padding: 20px 15px;
+
+        .templateSimple__header {
+            display: flex;
+            width: 85%;
+
+            .header_image{
+                width: 150px;
+                height: 150px;
+
+                & > img {
+                    border-radius: 100%;
+                }
+            }
+
+
+            .header__primaryDetails{
+                width: 75%;
+                margin-left: 15px;
+            }
+        }
+
+        .templateSimple__contacts{
+            text-align: end;
+            width: 30%;
+
+            .contacts__value{
+                // width: 120%;
+                font-size: 15px;
+                
+                & > i {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+.skills__container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.language__container, .hobbies__container{
+    display: flex;
+}
+
+

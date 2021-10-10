@@ -30,3 +30,15 @@ img{
 .ml-10px{
   margin-left: 10px;
 }
+
+.ml-20px{
+  margin-left: 20px;
+}
+
+.pAll-20px-15{
+  padding: 20px 15px;
+}
+
+.bb-1px-solid-black {
+  border-bottom: 1px solid black;
+}

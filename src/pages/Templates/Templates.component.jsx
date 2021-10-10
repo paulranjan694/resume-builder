@@ -42,14 +42,6 @@ class Templates extends Component{
                     collegeCity: "Gunupur",
                     graduationMonth: "June",
                     graduationYear: "2021"
-                },
-                {
-                    collegeName: "dv boys",
-                    degree: "class 12",
-                    cgpa: "66.4%",
-                    collegeCity: "wb",
-                    graduationMonth: "June",
-                    graduationYear: "2014"
                 }
             ],
             experienceDetails: [
@@ -64,12 +56,6 @@ class Templates extends Component{
                     duration: "2 Years",
                     position: "ABC",
                     description: "ABVD"
-                },
-                {
-                    companyName: "Wipro",
-                    duration: "2 Years",
-                    position: "ABC",
-                    description: ""
                 }
             ],
             projectDetails: [
@@ -101,8 +87,8 @@ class Templates extends Component{
         return (
             <div className="templates__container">
                 <h1>Resume</h1>
-                {/* <TemplateBasic {...this.state}/> */}
-                <TemplateSimple {...this.state}/>
+                <TemplateBasic {...this.state}/>
+                {/* <TemplateSimple {...this.state}/> */}
             </div>
         );
     }
