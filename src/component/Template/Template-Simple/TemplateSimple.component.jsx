@@ -10,6 +10,7 @@ import ResumeSkill from "../../resume-skill/ResumeSkill.component";
 import ResumeTitle from "../../resume-title/ResumeTitle.component";
 import ProfileLogo from './avatar.png'
 
+
 import "./TemplateSimple.style.scss";
 
 const TemplateSimple = ({
@@ -44,9 +45,7 @@ const TemplateSimple = ({
   };
 
   return (
-     
     <div className="templateSimple__wrapper">
-
       <div className="templateSimple__header__container">
         <div className="templateSimple__header">
           <div className="header_image">
@@ -161,7 +160,6 @@ const TemplateSimple = ({
         </div>
       </div>
     </div>
-
   );
 };
 

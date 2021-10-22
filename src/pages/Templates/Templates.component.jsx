@@ -2,13 +2,15 @@ import React, { Component } from 'react'
 import TemplateBasic from '../../component/Template/Template-Basic/TemplateBasic.component';
 import TemplateSimple from '../../component/Template/Template-Simple/TemplateSimple.component';
 
+
+
 class Templates extends Component{
 
     constructor(){
         super();
         this.state = {
             contactDetails : {
-                name: 'Ranjan Paul',
+                fullname: 'Ranjan Paul',
                 email: 'ranjan.paul@gmail.com',
                 bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ipsum illo vero. Consequatur dolorum autem quam labore',
                 phone: '00231596+',
@@ -89,6 +91,8 @@ class Templates extends Component{
                 <h1>Resume</h1>
                 <TemplateBasic {...this.state}/>
                 {/* <TemplateSimple {...this.state}/> */}
+
+                
             </div>
         );
     }

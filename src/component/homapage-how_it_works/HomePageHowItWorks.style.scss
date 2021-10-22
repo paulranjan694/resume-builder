@@ -1,0 +1,62 @@
+@import '../../commonStyles.scss';
+
+.section__wrapper {
+    position: relative;
+
+    & .section__title{
+        @include sectionTitle;
+
+        &::after{
+            @include sectionTitleAfter
+        }
+    }
+
+    & .howItWorks__container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 70%;
+        // border: 1px solid;
+
+        & .row{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            // .column {
+            //     flex: 0.5;
+            // }
+
+            .col-icon{
+                width: 240px;
+                height: 250px;
+            }
+
+            .download-icon{
+               width: 220px !important;
+            }
+
+            .resumeFill-icon{
+                width: 500px !important;
+            }
+
+
+
+            .howItWorks__text{
+                font-size: 30px;
+                background: #dbeeff;
+                font-weight: 600;
+                padding: 25px 15px;
+                border-radius: 15px;
+            }
+        }
+    }
+
+    .wave__line{
+    position: absolute;
+    top: 58%;
+    z-index: -1;
+    opacity: 0.4;
+    }
+
+}

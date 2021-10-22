@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { auth, createUserDocument } from '../../firebase/config';
 import { updateProfile } from "firebase/auth";
+import './SignUp.style.scss'
+import FormInput from '../form-input/FormInput.component';
+import Button from '../button/Button.component';
 
 class SignUp extends Component {
     state = {
@@ -20,6 +23,7 @@ class SignUp extends Component {
     handleSubmit = async (event) => {
         event.preventDefault();
         const {displayName, email, password, confirm_password} = this.state;
+        console.log(displayName, email, password, confirm_password);
         if(password !== confirm_password){
             alert("Password Mismatch, Please try again!!");
             return;
@@ -45,33 +49,19 @@ class SignUp extends Component {
     }
 
     render(){
-        // console.log(this.state);
         return (
             <div className='SignUp__container'>
                 <form onSubmit={this.handleSubmit} method='post'>
-                    <div className="SignUp__field">
-                        <label>Name</label>
-                        <input type="text" name="displayName" onChange={this.handleChange} />
-                    </div>
+                    <FormInput title="Name" type="text" value={this.state.displayName} name="displayName" handleChange={this.handleChange} />
 
-                    {/* <FormInput title='Name' type="text" name='name'/> */}
+                    <FormInput title="Email Id" type="email" value={this.state.email} name="email" handleChange={this.handleChange} />
 
-                    <div className="SignUp__field">
-                        <label>Email Id</label>
-                        <input type="email" name="email" onChange={this.handleChange}/>
-                    </div>
+                    <FormInput title="Password" type="password" value={this.state.password} name="password" handleChange={this.handleChange} />
 
-                    <div className="SignUp__field">
-                        <label>Password</label>
-                        <input type="password" name="password" onChange={this.handleChange}/>
-                    </div>
+                    <FormInput title="Confirm Password" type="password" value={this.state.confirm_password} name="confirm_password" handleChange={this.handleChange} />
 
-                    <div className="SignUp__field">
-                        <label>Confirm Password</label>
-                        <input type="password" name="confirm_password" onChange={this.handleChange}/>
-                    </div>
+                    <Button title="Sign Up" type="submit" style="regular" />
 
-                    <button type="submit" className="SignUp__submit">Sign Up</button>
                 </form>
             </div>
         )

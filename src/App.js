@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import { Redirect, Route, Switch } from "react-router";
+import { ToastContainer } from "react-toastify";
 import Navbar from "./component/Navbar/Navbar.component";
 import { auth, firestore } from "./firebase/config";
 import HomePage from "./pages/HomePage/HomePage.Component";
 import SignInAndSignUp from "./pages/SignInAndSignUp/SignInAndSignUp.component";
 import Templates from "./pages/Templates/Templates.component";
+import 'react-toastify/dist/ReactToastify.css';
 
 class App extends Component {
   state = {
@@ -34,6 +36,17 @@ class App extends Component {
     return (
       <div>
         <Navbar currentUser = {this.state.currentUser} />
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+      />
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/templates" component={Templates} />

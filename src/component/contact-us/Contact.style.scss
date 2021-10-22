@@ -1,0 +1,25 @@
+@import '../../commonStyles.scss';
+
+.section__title{
+    @include sectionTitle;
+
+    &::after{
+        @include sectionTitleAfter
+    }
+}
+
+.contact-form__container{
+    background: #4caf504a;
+    padding: 25px 20px;
+    margin: 0 auto;
+    width: 50%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
+
+   & button {
+       margin-top: 20px;
+   }
+}

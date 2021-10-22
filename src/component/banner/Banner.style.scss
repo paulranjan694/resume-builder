@@ -1,0 +1,29 @@
+.banner__primarySection{
+    display: flex;
+    justify-content: space-evenly;
+
+    .banner__left {
+        font-family: 'Festive';
+        flex: 0.6 1;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        font-size: 65px;
+        font-weight: 900;
+    }
+
+    .banner__right {
+        flex: 0.5;
+    }
+}
+
+.banner__sideImage{
+    width: 600px;
+    height: 500px;
+}
+
+
+.banner__secondarySection{
+    margin-top: -130px;
+    opacity: 0.2;
+}

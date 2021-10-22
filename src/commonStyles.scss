@@ -1,0 +1,22 @@
+@mixin sectionTitle {
+  font-size: 45px;
+  margin: 30px 0 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@mixin sectionTitleAfter {
+  content: "";
+  width: 100px;
+  height: 5px;
+  background: red;
+  margin-top: 8px;
+  border-radius: 10px;
+}
+
+@mixin  ShrinkLabel {
+  top: 0px;
+  font-size: 18px;
+}

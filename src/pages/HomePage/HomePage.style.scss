@@ -1,0 +1,9 @@
+.homepage__container {
+  display: flex;
+  flex-direction: column;
+
+  .sub-section {
+    min-height: 75vh;
+    // border: 1px solid;
+  }
+}

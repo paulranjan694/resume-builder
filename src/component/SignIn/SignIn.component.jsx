@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { auth } from "../../firebase/config";
+import Button from "../button/Button.component";
 import FormInput from "../form-input/FormInput.component";
+
+import './SignIn.style.scss';
 
 class SignIn extends Component {
   state = {
@@ -35,6 +38,7 @@ class SignIn extends Component {
             type="email"
             name="email"
             handleChange={this.handleChange}
+            value={this.state.email}
           />
 
             <FormInput
@@ -42,12 +46,12 @@ class SignIn extends Component {
             type="password"
             name="password"
             handleChange={this.handleChange}
+            value={this.state.password}
             />
-          <button type="submit" className="signIn__submit">
-            Sign In
-          </button>
-          &nbsp;&nbsp;&nbsp;
-          <button className="signIn__submit">Sign In with Google</button>
+            <div className="button-group">
+              <Button title="Sign In" type="submit" style="regular" />
+              <Button title="Sign In with Google" type="submit" style="regular" />
+            </div>
         </form>
       </div>
     );

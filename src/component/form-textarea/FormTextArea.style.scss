@@ -3,7 +3,7 @@
 .formInput__container{
     position: relative;
    
-    .formInput__input{
+    .formTextArea{
         background: none;
         border: none;
         border-bottom: 1px solid;
@@ -34,7 +34,5 @@
             @include ShrinkLabel;
         }
     }
-
-
 
 }
