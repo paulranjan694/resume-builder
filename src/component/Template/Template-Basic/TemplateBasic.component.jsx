@@ -12,6 +12,7 @@ import ReactToPdf from "react-to-pdf";
 
 import "./TemplateBasic.style.scss";
 import EditorSidebar from "../../editor-sidebar/EditorSidebar.component";
+import Button from "../../button/Button.component";
 
 
 const TemplateBasic = ({
@@ -46,7 +47,7 @@ const TemplateBasic = ({
 
   return (
       <div>
-
+<Button title="Save to DB" Style="regular"/>
 <ReactToPdf targetRef={ref} filename="div-blue.pdf">
         {({toPdf}) => (
             <button onClick={toPdf}>Generate pdf</button>

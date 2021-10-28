@@ -49,8 +49,8 @@ class SignIn extends Component {
             value={this.state.password}
             />
             <div className="button-group">
-              <Button title="Sign In" type="submit" style="regular" />
-              <Button title="Sign In with Google" type="submit" style="regular" />
+              <Button title="Sign In" type="submit" Style="regular" />
+              <Button title="Sign In with Google" type="submit" Style="regular" />
             </div>
         </form>
       </div>

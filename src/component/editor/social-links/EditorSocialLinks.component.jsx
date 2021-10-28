@@ -58,8 +58,8 @@ function EditorSocialLinks({clickHandler}) {
                     </div>
                 </div>
                 <div className="EditorSocialLinks__form-group">
-                    <Button title="Save" style="regular" type="submit"/>
-                    <Button title="Cancel" style="solid" type="button" clickHandler={clickHandler}/>
+                    <Button title="Save" Style="regular" type="submit"/>
+                    <Button title="Cancel" Style="solid" type="button" clickHandler={clickHandler}/>
                 </div>
                 </fieldset>
             </form>

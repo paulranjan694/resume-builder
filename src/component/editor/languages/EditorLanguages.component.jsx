@@ -67,10 +67,10 @@ function EditorLanguages({ clickHandler }) {
           }
         { inputFields.length >= 4 && <p className="warning-info" style={{color:'red'}}>You can enter max 4 languages</p>}
           <div className="EditorLanguages__form-group">
-            <Button title="Save" style="regular" type="submit"/>
+            <Button title="Save" Style="regular" type="submit"/>
             <Button
               title="Cancel"
-              style="solid"
+              Style="solid"
               type="button"
               clickHandler={clickHandler}
             />

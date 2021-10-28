@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Button from "../../button/Button.component";
 import FormInput from "../../form-input/FormInput.component";
-import FormTextArea from "../../form-textarea/FormTextArea.component";
 import "./EditorEducation.style.scss";
 
 function EditorEducation({ clickHandler }) {
@@ -100,10 +99,10 @@ function EditorEducation({ clickHandler }) {
           }
         { inputFields.length >= 3 && <p className="warning-info" style={{color:'red'}}>You can enter max 3 projects</p>}
           <div className="EditorEducation__form-group">
-            <Button title="Save" style="regular" type="submit"/>
+            <Button title="Save" Style="regular" type="submit"/>
             <Button
               title="Cancel"
-              style="solid"
+              Style="solid"
               type="button"
               clickHandler={clickHandler}
             />

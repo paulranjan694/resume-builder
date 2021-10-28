@@ -1,5 +1,4 @@
 import React from 'react'
-import Backdrop from '../backdrop/Backdrop.component';
 import './Modal.style.scss'
 
 function Modal({isOpen, children}) {

@@ -1,11 +1,11 @@
 import React from "react";
 import "./Button.style.scss";
-function Button({ title, style, history, link, type, clickHandler }) {
+function Button({ title, Style, history, link, type, clickHandler }) {
   // const {} = history;
   return (
     <button
       type={type}
-      className={`btn ${style}`}
+      className={`btn ${Style}`}
       onClick={ (history && link) ? () => history.push(`${link}`) : clickHandler}
     >
       {title}

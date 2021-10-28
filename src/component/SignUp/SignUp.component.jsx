@@ -49,9 +49,11 @@ class SignUp extends Component {
     }
 
     render(){
+        // console.log(this.state);
         return (
             <div className='SignUp__container'>
                 <form onSubmit={this.handleSubmit} method='post'>
+
                     <FormInput title="Name" type="text" value={this.state.displayName} name="displayName" handleChange={this.handleChange} />
 
                     <FormInput title="Email Id" type="email" value={this.state.email} name="email" handleChange={this.handleChange} />
@@ -60,7 +62,7 @@ class SignUp extends Component {
 
                     <FormInput title="Confirm Password" type="password" value={this.state.confirm_password} name="confirm_password" handleChange={this.handleChange} />
 
-                    <Button title="Sign Up" type="submit" style="regular" />
+                    <Button title="Sign Up" type="submit" Style="regular" />
 
                 </form>
             </div>

@@ -62,7 +62,7 @@ function Contact() {
           <FormInput title="Email" type="email" name="email" handleChange={handleChange} value={inputValue['email']}/>
           <FormInput title="Phone" type="text" name="phone" handleChange={handleChange} value={inputValue['phone']}/>
           <FormTextArea title="Query" name="query" col="30" row="1" handleChange={handleChange} value={inputValue['query']}/>
-          <Button title="Send" style="regular" />
+          <Button title="Send" Style="regular"/>
         </form>
       </div>
     </div>
