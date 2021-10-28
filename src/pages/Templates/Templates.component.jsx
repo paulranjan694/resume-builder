@@ -64,13 +64,13 @@ class Templates extends Component{
                 {
                     projectName: "Resume Builder",
                     techStack : ['html', 'css', 'react js'],
-                    summary:"build project",
+                    summary:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum voluptates ipsum totam odio culpa quis optio? Quia nemo sequi culpa cupiditate iusto fuga, corrupti placeat repellat officia explicabo assumenda modi?",
                     projectLink: "resume-builder.live"
                 },
                 {
                     projectName: "Resume Builder",
                     techStack : ['html', 'css', 'react js'],
-                    summary:"build project",
+                    summary:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum voluptates ipsum totam odio culpa quis optio",
                     projectLink: "resume-builder.live"
                 }
             ],

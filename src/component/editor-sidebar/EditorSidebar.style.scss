@@ -1,0 +1,22 @@
+.editor__sidebar__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #00c0ff;
+    position: fixed;
+    right: 0;
+    width: 5%;
+    top: 25%;
+
+    & > div {
+        border-top: 1px solid;
+        padding: 10px;
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+    }
+
+    & div:first-child{
+        border: none;
+    }
+}

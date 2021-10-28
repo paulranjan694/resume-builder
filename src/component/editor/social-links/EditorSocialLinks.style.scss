@@ -1,0 +1,18 @@
+@import '../../../commonStyles.scss';
+
+.EditorSocialLinks__container {
+  padding: 20px 30px;
+
+  & > form > fieldset {
+   @include fieldsetStyle;
+
+    & > legend {
+      @include legendStyle;
+    }
+  }
+
+  & .EditorSocialLinks__form-group {
+    display: flex;
+    justify-content: space-between;
+  }
+}

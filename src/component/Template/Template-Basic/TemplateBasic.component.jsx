@@ -11,6 +11,7 @@ import ResumeTitle from "../../resume-title/ResumeTitle.component";
 import ReactToPdf from "react-to-pdf";
 
 import "./TemplateBasic.style.scss";
+import EditorSidebar from "../../editor-sidebar/EditorSidebar.component";
 
 
 const TemplateBasic = ({
@@ -51,7 +52,7 @@ const TemplateBasic = ({
             <button onClick={toPdf}>Generate pdf</button>
         )}
     </ReactToPdf>
-          
+          <EditorSidebar/>
       <div className="templateBasic__wrapper"  ref={ref}>
         <div className="templateBasic__header">
           <div className="header__image">

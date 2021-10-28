@@ -7,6 +7,7 @@ import HomePage from "./pages/HomePage/HomePage.Component";
 import SignInAndSignUp from "./pages/SignInAndSignUp/SignInAndSignUp.component";
 import Templates from "./pages/Templates/Templates.component";
 import 'react-toastify/dist/ReactToastify.css';
+import Backdrop from "./component/backdrop/Backdrop.component";
 
 class App extends Component {
   state = {

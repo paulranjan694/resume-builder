@@ -16,7 +16,18 @@
   border-radius: 10px;
 }
 
-@mixin  ShrinkLabel {
+@mixin ShrinkLabel {
   top: 0px;
   font-size: 18px;
+}
+
+@mixin fieldsetStyle {
+  padding: 20px;
+  border: 3px solid #607d8b;
+  border-radius: 5px;
+}
+
+@mixin legendStyle {
+  color: red;
+  font-size: 20px;
 }

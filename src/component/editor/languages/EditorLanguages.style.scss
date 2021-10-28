@@ -1,0 +1,33 @@
+@import "../../../commonStyles.scss";
+
+.EditorLanguages__container {
+  padding: 20px 30px;
+
+  & > form > fieldset {
+    @include fieldsetStyle;
+
+    & > legend {
+      @include legendStyle;
+    }
+  }
+
+  & .EditorLanguages__form-group {
+    display: flex;
+    // justify-content: space-between;
+
+    & .EditorLanguages__form-input {
+      margin-left: 30px;
+
+      & .editor-language-plus-icon {
+        display: flex;
+        font-size: 30px;
+        margin-top: 10 px;
+      }
+
+      & .inactive{
+          cursor: not-allowed;
+        //   display: none;
+      }
+    }
+  }
+}
