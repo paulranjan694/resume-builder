@@ -7,36 +7,42 @@ import HomePage from "./pages/HomePage/HomePage.Component";
 import SignInAndSignUp from "./pages/SignInAndSignUp/SignInAndSignUp.component";
 import Templates from "./pages/Templates/Templates.component";
 import 'react-toastify/dist/ReactToastify.css';
+import { connect } from "react-redux";
+import { selectCurrentUser } from "./redux/user/user.selector";
+import { currentUser, setCurrentUser } from "./redux/user/user.action";
+import { createStructuredSelector } from 'reselect';
 
 
 class App extends Component {
-  state = {
-    currentUser: null,
-  };
+  // state = {
+  //   currentUser: null,
+  // };
   componentDidMount() {
-    firestore
-      .collection("resumes")
-      .get()
-      .then((docs) =>
-        docs.forEach((doc) => {
-          console.log(doc.id);
-          console.log(doc.data());
-        })
-      );
+  const {setCurrentUser} = this.props;
+
+    // firestore
+    //   .collection("resumes")
+    //   .get()
+    //   .then((docs) =>
+    //     docs.forEach((doc) => {
+    //       console.log(doc.id);
+    //       console.log(doc.data());
+    //     })
+    //   );
 
     auth.onAuthStateChanged((authUser) => {
       if (authUser) {
         console.log("authuser - ", authUser);
-        this.setState({ currentUser: authUser });
+        setCurrentUser(authUser);
       }else{
-        this.setState({ currentUser: null });
+        setCurrentUser(null);
       }
     });
   }
   render() {
     return (
       <div>
-        <Navbar currentUser = {this.state.currentUser} />
+        <Navbar currentUser = {this.props.currentUser} />
         <ToastContainer
           position="top-right"
           autoClose={5000}
@@ -56,7 +62,7 @@ class App extends Component {
             exact
             path="/sign-up"
             render={(props) =>
-              this.state.currentUser ? (
+              this.props.currentUser ? (
                 <Redirect to="/" />
               ) : (
                 <SignInAndSignUp {...props} />
@@ -67,7 +73,7 @@ class App extends Component {
             exact
             path="/sign-in"
             render={(props) =>
-              this.state.currentUser ? (
+              this.props.currentUser ? (
                 <Redirect to="/" />
               ) : (
                 <SignInAndSignUp {...props} />
@@ -80,4 +86,18 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  currentUser:  selectCurrentUser(state),
+})
+
+// ***using reselct -> createStructuredSelector syntax ********************
+// const mapStateToProps = createStructuredSelector({
+//   currentUser:  selectCurrentUser,
+// })
+// ************************
+
+const mapDispatchToProps = dispatch =>({
+  setCurrentUser: user => dispatch(setCurrentUser(user))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
