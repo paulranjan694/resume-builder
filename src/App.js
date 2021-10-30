@@ -11,6 +11,7 @@ import { connect } from "react-redux";
 import { selectCurrentUser } from "./redux/user/user.selector";
 import { currentUser, setCurrentUser } from "./redux/user/user.action";
 import { createStructuredSelector } from 'reselect';
+import PrivateRoute from './routes/PrivateRoute';
 
 
 class App extends Component {
@@ -56,7 +57,7 @@ class App extends Component {
       />
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/templates" component={Templates} />
+          <PrivateRoute exact path="/templates" component={Templates} />
           <Route exact path="/about" component={HomePage} />
           <Route
             exact
@@ -69,9 +70,11 @@ class App extends Component {
               )
             }
           />
+          {/* <PrivateRoute exact
+            path="/sign-up" component={SignInAndSignUp}/> */}
           <Route
             exact
-            path="/sign-in"
+           path="/sign-in"
             render={(props) =>
               this.props.currentUser ? (
                 <Redirect to="/" />
@@ -80,6 +83,7 @@ class App extends Component {
               )
             }
           />
+          {/* <PrivateRoute exact path="/sign-in" component={SignInAndSignUp} /> */}
         </Switch>
       </div>
     );
